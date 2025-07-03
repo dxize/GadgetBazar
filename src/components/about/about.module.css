@@ -1,0 +1,115 @@
+.about
+{
+    width: 100%;
+}
+
+.about__title
+{
+    width: 35%;
+    height: 48px;
+    margin: 76px auto 0 auto;
+    text-align: center;   
+    font-family: Nunito;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(0, 0, 0, 1);   
+}
+
+.about__subtitle    
+{
+    width: 73%;
+    height: 93px;
+    margin: 27px auto 76px auto;
+    font-family: Nunito;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 173%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);    
+}
+
+.about__services
+{
+    width: 100%;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.47)),
+        url('../../assets/BackgroundWatch.svg');
+    background-size: 100% 100%, cover;
+    background-position: top, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.about__services__container
+{
+    width: 85%;
+    height: 498px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 32px;
+}
+
+.about__services__container__service
+{
+    flex: 1;
+    margin: auto 0;
+    width: 32%;
+    height: 246px;
+    background-color: rgba(187, 222, 251, 1);
+    border-radius: 12px;
+}
+
+.about__services__container__service__button
+{
+    width: 14%;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(52, 152, 219, 1);
+    border-radius: 9px;
+    margin-top: 23px;
+    margin-left: 9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.about__services__container__service__button:focus 
+{
+  outline: none;
+}
+
+.about__services__container__service__button:hover 
+{
+  outline: none;
+}
+
+.about__services__container__service__button:active 
+{
+  transform: scale(0.96);   
+}
+
+.about__services__container__service__button__icon
+{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    user-select: none;
+}
+
+.about__services__container__service__text
+{
+    text-align: left;
+    width: 81%;
+    margin: 8% auto 0 auto;
+    line-height: 140%;
+    font-family: Nunito;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: rgba(0, 0, 0, 1);
+}

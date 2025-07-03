@@ -1,0 +1,159 @@
+.title
+{
+    margin-top: 56px;
+    font-family: Nunito;
+    font-weight: 800;
+    font-style: ExtraBold;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+    width: 100%;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0; 
+  width: 100%;
+  position: relative;
+  overflow: hidden; 
+  height: 527px;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.card {
+  background: #f3f3f3;
+  color: #000;
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  width: min(90vw, 400px);
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+
+  grid-area: 1 / 1; 
+
+  transform: translateX(0) scale(0.9);
+
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              filter   0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity  0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  filter: none;
+  z-index: 2;
+  width: 33%;
+  height: 337px;
+}
+
+.prev,
+.next {
+  filter: blur(3px) brightness(0.85);
+  opacity: 0.6;
+  z-index: 1;
+  width: 23%;
+  height: 287px;
+}
+
+.prev {
+  transform: translateX(-65%) scale(0.9);
+}
+
+.next {
+  transform: translateX(65%) scale(0.9);
+}
+
+.arrow {
+  background: rgba(187, 222, 251, 1);
+  border: none;
+  width: 13px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;   
+}
+
+.arrow:hover {
+  background: #9ec9ff;
+  outline: none;
+}
+
+.arrow:focus
+{
+    outline: none;
+}
+
+.off {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(0) scale(0.9);
+}
+
+
+.prevArrow,
+.nextArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.prevArrow {
+  margin-right: 896px; 
+  z-index: 3;
+}
+
+.nextArrow {
+  margin-left: 896px;
+  z-index: 3;
+}
+
+.name
+{
+    font-family: Nunito;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(0, 0, 0, 1);
+    width: 100%;
+}
+
+.text
+{
+    width: 100%;
+    margin-top: 20px;
+    font-family: Nunito;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 173%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+}

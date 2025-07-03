@@ -1,0 +1,190 @@
+.header 
+{
+  position: relative;      
+  overflow: hidden;        
+  display: flex;           
+  flex-direction: column;
+  align-items: flex-start; 
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.52) 50%,
+    rgba(0,   0,   0,   0.25) 70%
+  );
+  backdrop-filter: blur(22.5px);
+  width: 100%;
+  height: 754px;
+  min-height: auto;  
+  box-shadow: 
+    0 20px 30px rgba(0,0,0,0.2),  
+    0 6px 6px rgba(0,0,0,0.15);   
+}
+
+.header__content 
+{
+  width: 86%;
+  margin: 16px auto 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  position: relative;
+}
+
+.header__content__info
+{
+  width: 100%;
+  max-width: 503px;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 2;
+}
+
+.header__content__info__text
+{
+  font-family: Nunito;
+  font-weight: 800;
+  line-height: 140%;
+  color: rgba(0, 0, 0, 1);
+  width: 100%;
+}
+
+.header__content__info__text__hypertext
+{
+  user-select: none;
+  cursor: pointer;
+  color:rgba(52, 152, 219, 1);
+}
+
+.header__content__info__button
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 27px;
+  width: 26%;
+  background-color: rgba(52, 152, 219, 1);
+  color: rgba(255, 255, 255, 1);
+  user-select: none;
+  min-height: 36px;
+}
+
+.header__content__info__button:focus 
+{
+  outline: none;
+}
+
+.header__content__info__button:hover 
+{
+  outline: none;
+}
+
+.header__content__info__button:active 
+{
+  transform: scale(0.96);   
+}
+
+.header__content__info__button__arrow
+{
+  max-width: 12px;
+  max-height: 10px;
+  margin: 5% 0 0 5%;
+}
+
+.header__content__functions
+{
+  max-width: 480px;
+  grid-column: 2;
+  grid-row: 1;
+  z-index: 1;
+  justify-self: end;
+  margin-top: 128px;
+}
+
+.header__content__functions__func
+{ 
+  width: 185px;
+  height: 59px;
+}
+
+.header__content__functions__func__button
+{ 
+  display: grid;
+  grid-template-columns: 0px 1fr;
+  align-items: center;
+  justify-items: stretch;
+  padding: 0;
+  width: 100%;
+  user-select: none;
+  border-radius: 23px;
+  background-color: rgba(187, 222, 251, 1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 49px;
+  overflow: visible;
+}
+
+.header__content__functions__func__button:focus 
+{
+  outline: none;
+}
+
+.header__content__functions__func__button:hover 
+{
+  outline: none;
+}
+
+.header__content__functions__func__button:active 
+{
+  transform: scale(0.96);   
+}
+
+.header__content__functions_func__button__icon
+{
+  width: 39px;
+  height: 39px;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  justify-self: start;
+  margin-left: -12px;
+  margin-top: -10px;
+}
+
+.header__content__functions__func__button__text
+{
+  width: 100%;
+  padding: 0;
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color:rgba(0, 0, 0, 1);
+  text-align: center;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
+
+.header__content__pic
+{
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: start;
+  z-index: 1;
+  width: 597px;
+  min-height: 418px;
+  height: 74%;
+  transform: rotate(18.33 deg);
+  margin-left: 5%;
+}
+
+.header__content__pic__watch
+{
+  background-image: url('../../assets/modern-blue-grunge-brushstroke-texture-vector-removebg-preview.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 418px;
+  user-select: none;
+}
