@@ -4,6 +4,7 @@ import About from './components/about/about.tsx'
 import BestSellers from './components/best-sellers/best-sellers.tsx'
 import Discover from './components/discover/discover.tsx'
 import Reviews from './components/reviews/reviews.tsx'
+import Footer from './components/footer/footer.tsx'
 
 function App() 
 {
@@ -14,6 +15,7 @@ function App()
       <BestSellers/>
       <Discover/>
       <Reviews/>
+      <Footer/>
     </>
   )
 }
