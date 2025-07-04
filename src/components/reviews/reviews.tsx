@@ -40,7 +40,7 @@ export default function Reviews() {
 
   return (
     <>
-        <div className={styles['title']}>Our Costumers Says</div>
+        <div className={styles['title']}>Our Costumers Say</div>
         <div className={styles['slider']}>
             <button onClick={prev} className={`${styles['arrow']} ${styles['prevArrow']}`} aria-label="Previous review">
                 ‹
