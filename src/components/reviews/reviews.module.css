@@ -13,47 +13,48 @@
 }
 
 .slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0; 
-  width: 100%;
-  position: relative;
-  overflow: hidden; 
-  height: 527px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0; 
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+    height: 527px;
 }
 
 .wrapper {
-  display: grid;
-  place-items: center;
-  overflow: hidden;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
 }
 
 .card {
-  background: #f3f3f3;
-  color: #000;
-  border-radius: 8px;
-  padding: 2rem 2.5rem;
-  width: min(90vw, 400px);
-  text-align: center;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    background: #f3f3f3;
+    color: #000;
+    border-radius: 8px;
+    padding: 2rem 2.5rem;
+    width: min(90vw, 400px);
+    text-align: center;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 
-  grid-area: 1 / 1; 
+    grid-area: 1 / 1; 
 
-  transform: translateX(0) scale(0.9);
+    transform: translateX(0) scale(0.9);
 
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-              filter   0.6s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity  0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                filter   0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity  0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    user-select: none;
 }
 
 .active {
@@ -67,39 +68,44 @@
 
 .prev,
 .next {
-  filter: blur(3px) brightness(0.85);
-  opacity: 0.6;
-  z-index: 1;
-  width: 23%;
-  height: 287px;
+    filter: blur(3px) brightness(0.85);
+    opacity: 0.6;
+    z-index: 1;
+    width: 23%;
+    height: 287px;
+    user-select: none;
 }
 
 .prev {
-  transform: translateX(-65%) scale(0.9);
+    transform: translateX(-65%) scale(0.9);
 }
 
 .next {
-  transform: translateX(65%) scale(0.9);
+    transform: translateX(65%) scale(0.9);
 }
 
 .arrow {
-  background: rgba(187, 222, 251, 1);
-  border: none;
-  width: 13px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.75rem;
-  color: #000;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border-radius: 50%;   
+    background: rgba(187, 222, 251, 1);
+    border: none;
+    width: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;   
+    user-select: none;
+    font-family: Nunito;
+    font-weight: 700;
+    font-style: Bold;
+
 }
 
 .arrow:hover {
-  background: #9ec9ff;
-  outline: none;
+    background: #9ec9ff;
+    outline: none;
 }
 
 .arrow:focus
@@ -107,29 +113,30 @@
     outline: none;
 }
 
+
 .off {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateX(0) scale(0.9);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(0) scale(0.9);
 }
 
 
 .prevArrow,
 .nextArrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
 }
 
 .prevArrow {
-  margin-right: 896px; 
-  z-index: 3;
+    margin-right: 896px; 
+    z-index: 3;
 }
 
 .nextArrow {
-  margin-left: 896px;
-  z-index: 3;
+    margin-left: 896px;
+    z-index: 3;
 }
 
 .name
