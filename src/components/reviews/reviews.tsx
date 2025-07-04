@@ -2,6 +2,8 @@ import styles from './reviews.module.css'
 import type { Review } from '../../types/types'
 import { useState } from 'react'
 import Avatar from '../../assets/Avatar.svg'
+import Avatar2 from '../../assets/VovaB.png'
+import Avatar3 from '../../assets/VovaKrasavetch.jpg'
 
 const reviews: Review[] = [
   {
@@ -10,13 +12,13 @@ const reviews: Review[] = [
     text: 'Love my new Apple Airpods! It\'s sleek, packed with features, and has great battery life. Highly recommend!',
   },
   {
-    name: 'Madhvi',
-    avatar: Avatar,
+    name: 'Vova Barilnik',
+    avatar: Avatar2,
     text: 'Absolutely thrilled with my purchase. The sound quality is top-notch and the comfort is unmatched.',
   },
   {
-    name: 'Bhide',
-    avatar: Avatar,
+    name: 'Vova Krasavetch',
+    avatar: Avatar3,
     text: 'Best gadget investment I\'ve made this year. The design is stunning and performance is flawless!',
   },
 ];
