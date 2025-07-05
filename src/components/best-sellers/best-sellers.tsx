@@ -4,14 +4,12 @@ import Headphone from '../../assets/Headphone.svg'
 import DigitalCamera from '../../assets/DigitalCamera.svg'
 import WhiteArrow from '../../assets/WhiteArrow.svg'
 
-// Define product type
 interface Product {
     background: string;
     title: string;
     price: string;
 }
 
-// Reusable product card component
 function ProductCard({ background, title, price }: Product) {
     return (
         <button
