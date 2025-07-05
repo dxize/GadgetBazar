@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Avatar from '../../assets/Avatar.svg'
 import Avatar2 from '../../assets/VovaB.png'
 import Avatar3 from '../../assets/VovaKrasavetch.jpg'
+import Avatar4 from '../../assets/SmartPersonWallpaperDownload.jpg'
 
 const reviews: Review[] = [
   {
@@ -20,6 +21,11 @@ const reviews: Review[] = [
     name: 'Vova Krasavetch',
     avatar: Avatar3,
     text: 'Best gadget investment I\'ve made this year. The design is stunning and performance is flawless!',
+  },
+  {
+    name: 'Smart Person',
+    avatar: Avatar4,
+    text: 'Fantastic purchase overall! Elegant design, lightning-fast performance, and battery that keeps going all day — absolutely love it',
   },
 ];
 

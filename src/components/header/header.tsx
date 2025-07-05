@@ -32,7 +32,7 @@ function Header()
                         <div className={styles['header__content__functions__func']} style={{marginLeft: '38%'}}>
                             <button className={styles['header__content__functions__func__button']}>
                                 <img src={PulseIcon} alt="PulseIcon" className={styles['header__content__functions_func__button__icon']}></img>
-                                <div className={styles['header__content__functions__func__button__text']}>Fitness Tracking</div>
+                                <span className={styles['header__content__functions__func__button__text']}>Fitness Tracking</span>
                             </button>
                         </div>
                         <div className={styles['header__content__functions__func']} style={{marginLeft: '62%', marginTop: '44px'}}>
