@@ -3,8 +3,13 @@
     display: flex;
     width: 86%;
     margin: 0 auto;
-    background-color: transparent;
-    box-shadow: none;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(1px);          
+    border-radius: 10px;
 } 
 
 .nav-bar__market-logo
@@ -19,7 +24,7 @@
 .nav-bar__button
 {
     padding: 0;
-    margin: 13px 0 13px 0;
+    margin: auto;
     width: 3.8%;
     font-size: clamp(10px, 2vw, 18px);
     background: transparent;
@@ -63,9 +68,9 @@
   border-radius: 8px;
   font-size: 16px;
   color: rgba(255, 255, 255, 1);
-  margin-left: 2.35%;
   max-width: 140px;
   user-select: none;
+  margin: auto 0 auto 2.35%;
 }
 
 .nav-bar__start-button:focus 

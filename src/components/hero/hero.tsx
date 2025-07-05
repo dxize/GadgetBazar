@@ -6,7 +6,6 @@ import MusicIcon from '../../assets/MusicIcon.svg'
 import PuzzleIcon from '../../assets/PuzzleIcon.svg'
 import AimIcon from '../../assets/AimIcon.svg'
 
-// Define reusable feature card type and component
 interface FunctionButton {
     icon: string;
     alt: string;

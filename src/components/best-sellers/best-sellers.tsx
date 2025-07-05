@@ -16,10 +16,10 @@ function ProductCard({ background, title, price }: Product) {
             className={styles['best-sellers__products__product']}
             style={{ backgroundImage: `url(${background})` }}
         >
-            <div className={styles['best-sellers__products__product__text']}>
-                <div className={styles['best-sellers__products__product__text__title']}>{title}</div>
-                <div className={styles['best-sellers__products__product__text__price']}>{price}</div>
-            </div>
+            <span className={styles['best-sellers__products__product__text']}>
+                <span className={styles['best-sellers__products__product__text__title']}>{title}</span>
+                <span className={styles['best-sellers__products__product__text__price']}>{price}</span>
+            </span> 
         </button>
     );
 }
