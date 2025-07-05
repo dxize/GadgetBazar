@@ -1,4 +1,4 @@
-.header 
+.hero 
 {
   position: relative;      
   overflow: hidden;        
@@ -14,12 +14,10 @@
   width: 100%;
   height: 754px;
   min-height: auto;  
-  box-shadow: 
-    0 20px 30px rgba(0,0,0,0.2),  
-    0 6px 6px rgba(0,0,0,0.15);   
+  box-shadow: 0 16px 24px -16px rgba(0, 0, 0, 0.3);
 }
 
-.header__content 
+.hero__content 
 {
   width: 86%;
   margin: 16px auto 0 auto;
@@ -28,7 +26,7 @@
   position: relative;
 }
 
-.header__content__info
+.hero__content__info
 {
   width: 100%;
   max-width: 503px;
@@ -37,7 +35,7 @@
   z-index: 2;
 }
 
-.header__content__info__text
+.hero__content__info__text
 {
   font-family: Nunito;
   font-weight: 800;
@@ -46,14 +44,14 @@
   width: 100%;
 }
 
-.header__content__info__text__hypertext
+.hero__content__info__text__hypertext
 {
   user-select: none;
   cursor: pointer;
   color:rgba(52, 152, 219, 1);
 }
 
-.header__content__info__button
+.hero__content__info__button
 {
   display: flex;
   align-items: center;
@@ -66,29 +64,29 @@
   min-height: 36px;
 }
 
-.header__content__info__button:focus 
+.hero__content__info__button:focus 
 {
   outline: none;
 }
 
-.header__content__info__button:hover 
+.hero__content__info__button:hover 
 {
   outline: none;
 }
 
-.header__content__info__button:active 
+.hero__content__info__button:active 
 {
   transform: scale(0.96);   
 }
 
-.header__content__info__button__arrow
+.hero__content__info__button__arrow
 {
   max-width: 12px;
   max-height: 10px;
   margin: 5% 0 0 5%;
 }
 
-.header__content__functions
+.hero__content__functions
 {
   max-width: 480px;
   grid-column: 2;
@@ -98,13 +96,13 @@
   margin-top: 128px;
 }
 
-.header__content__functions__func
+.hero__content__functions__func
 { 
   width: 185px;
   height: 59px;
 }
 
-.header__content__functions__func__button
+.hero__content__functions__func__button
 { 
   display: grid;
   grid-template-columns: 0px 1fr;
@@ -120,22 +118,22 @@
   overflow: visible;
 }
 
-.header__content__functions__func__button:focus 
+.hero__content__functions__func__button:focus 
 {
   outline: none;
 }
 
-.header__content__functions__func__button:hover 
+.hero__content__functions__func__button:hover 
 {
   outline: none;
 }
 
-.header__content__functions__func__button:active 
+.hero__content__functions__func__button:active 
 {
   transform: scale(0.96);   
 }
 
-.header__content__functions_func__button__icon
+.hero__content__functions_func__button__icon
 {
   width: 39px;
   height: 39px;
@@ -147,7 +145,7 @@
   margin-top: -10px;
 }
 
-.header__content__functions__func__button__text
+.hero__content__functions__func__button__text
 {
   width: 100%;
   padding: 0;
@@ -164,7 +162,7 @@
   align-self: center;
 }
 
-.header__content__pic
+.hero__content__pic
 {
   grid-column: 1 / span 2;
   grid-row: 1;
@@ -178,7 +176,7 @@
   margin-left: 5%;
 }
 
-.header__content__pic__watch
+.hero__content__pic__watch
 {
   background-image: url('../../assets/modern-blue-grunge-brushstroke-texture-vector-removebg-preview.svg');
   background-size: cover;

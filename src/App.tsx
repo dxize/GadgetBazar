@@ -1,16 +1,18 @@
 import './App.css'
-import Header from './components/header/header.tsx'
+import Hero from './components/hero/hero.tsx' 
 import About from './components/about/about.tsx'
 import BestSellers from './components/best-sellers/best-sellers.tsx'
 import Discover from './components/discover/discover.tsx'
 import Reviews from './components/reviews/reviews.tsx'
 import Footer from './components/footer/footer.tsx'
+import NavBar from './components/nav-bar/nav-bar.tsx'
 
 function App() 
 {
   return (
     <>
-      <Header/>
+      <NavBar/>
+      <Hero/>
       <About/>
       <BestSellers/>
       <Discover/>

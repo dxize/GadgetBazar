@@ -3,6 +3,8 @@
     display: flex;
     width: 86%;
     margin: 0 auto;
+    background-color: transparent;
+    box-shadow: none;
 } 
 
 .nav-bar__market-logo
