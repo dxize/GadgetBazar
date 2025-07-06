@@ -1,15 +1,35 @@
 import styles from './nav-bar.module.css' 
 import GadgetBazar from '../../assets/GadgetBazar.png'
+import { useNavigate } from 'react-router-dom';
 
 function NavBar()
 {
+    const navigate = useNavigate();
+
+    const handleHomeClick = () => {
+        navigate('/');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const handleAboutClick = () => {
+        navigate('/');
+        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const handleProductClick = () => {
+        navigate('/');
+        document.getElementById('product')?.scrollIntoView({ behavior: 'smooth' });
+    }
+
     return(
         <div className={styles['nav-bar']}>
             <img src={GadgetBazar} className={styles['nav-bar__market-logo']}/>
-            <button className={styles['nav-bar__button']} style={{ marginLeft: '34%' }}>Home</button>
-            <button className={styles['nav-bar__button']} style={{ marginLeft: '3%' }}>About</button>
-            <button className={styles['nav-bar__button']} style={{ marginLeft: '3%' }}>Product</button>
-            <button className={styles['nav-bar__button']} style={{ marginLeft: '3%' }}>Contact</button>
+            <button className={styles['nav-bar__button']} style={{ marginLeft: '34%' }} onClick={handleHomeClick}>Home</button>
+            <button className={styles['nav-bar__button']} style={{ marginLeft: '3%' }} onClick={handleAboutClick}>About</button>
+            <button className={styles['nav-bar__button']} style={{ marginLeft: '3%' }} onClick={handleProductClick}>Product</button>
+            <a href="https://github.com/dxize/GadgetBazar" style={{ margin: 'auto 0 auto 3%', width: '3.8%' }}>
+                <button className={styles['nav-bar__button']} style={{ width: '100%' }}>Contact</button>
+            </a>
             <button className={styles['nav-bar__button']} style={{ marginLeft: '6.5%', maxWidth: '30px', maxHeight: '30px'}}>
                 <svg xmlns="http://www.w3.org/2000/svg" className={styles['nav-bar__search-basket']} style={{ marginTop: '9%' }}>
                     <path d="M15.7832 14.3911L20 18.6069L18.6069 20L14.3911 15.7832C12.8224 17.0407 10.8713 17.7246 8.86088 17.7218C3.96968 17.7218 0 13.7521 0 8.86088C0 3.96968 3.96968 0 8.86088 0C13.7521 0 17.7218 3.96968 17.7218 8.86088C17.7246 10.8713 17.0407 12.8224 15.7832 14.3911ZM13.8082 13.6605C15.0577 12.3756 15.7555 10.6532 15.7527 8.86088C15.7527 5.05366 12.6681 1.96909 8.86088 1.96909C5.05366 1.96909 1.96909 5.05366 1.96909 8.86088C1.96909 12.6681 5.05366 15.7527 8.86088 15.7527C10.6532 15.7555 12.3756 15.0577 13.6605 13.8082L13.8082 13.6605Z" fill="black"/>

@@ -33,7 +33,7 @@ function BestSellers()
     ];
 
     return (
-        <div className={styles['best-sellers']}>
+        <div id="product" className={styles['best-sellers']}>
             <div className={styles['best-sellers__title']}>Best Sellers</div>
             <div className={styles['best-sellers__subtitle']}>Discover our curated collection of best sellers  –  handpicked favorites loved by our customers for<br/>their exceptional quality, performance, and value.</div>
             <div className={styles['best-sellers__products']}>

@@ -55,7 +55,7 @@ function About()
     ];
 
     return (
-        <div className={styles['about']}>
+        <div id="about" className={styles['about']}>
             <div className={styles['about__title']}>
                 ABOUT Gadget
                 <span className={styles['about__title']} style={{color:'rgba(52, 152, 219, 1)'}}>Bazar</span>
