@@ -1,0 +1,147 @@
+.basket {
+    width: 90%;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.basket__title {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.basket__clear {
+    align-self: flex-end;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+    user-select: none;
+    width: 100%;
+}
+
+.basket__clear:hover {
+    background: #c0392b;
+    outline: none;
+}
+
+.basket__clear:focus {
+    outline: none;
+}
+
+.basket__clear:active {
+    transform: scale(0.96);
+}
+
+.basket__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f3f3f3;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.basket__item__image {
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    object-fit: contain;
+    user-select: none;
+}
+
+.basket__item__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 87%;
+}
+
+.basket__item__title {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.basket__item__price {  
+    width: 100%;
+    font-weight: 700;
+    color: #3498db;
+    font-size: 0.95rem;
+}
+
+.basket__item__controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.basket__item__controls button {
+    width: 32px;
+    height: 32px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.basket__item__controls button:hover {
+    background: #2980b9;
+    outline: none;
+}
+
+.basket__item__controls button:focus {
+    outline: none;
+}
+
+.basket__item__controls button:active {
+    transform: scale(0.95);
+}
+
+.basket__item__remove {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    user-select: none;
+    width: 100%;
+}
+
+.basket__item__remove:hover {
+    background: #c0392b;
+    outline: none;
+}
+
+.basket__item__remove:focus {
+    outline: none;
+}
+
+.basket__item__remove:active {
+    transform: scale(0.96);
+}
+
+
+.basket__empty {
+    font-size: 24px;
+    text-align: center;
+    margin: 80px 0;
+    font-weight: 500;
+}

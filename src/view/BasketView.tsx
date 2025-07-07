@@ -5,15 +5,16 @@ import Basket from "../components/basket/basket"
 
 interface BasketViewProps {
     basket: Good[]
+    onAdd: (item: Good) => void
     onRemove: (index: number) => void
     onClear: () => void
 }
 
-function BasketView({ basket, onRemove, onClear }: BasketViewProps) {
+function BasketView({ basket, onAdd, onRemove, onClear }: BasketViewProps) {
     return (
         <>
             <NavBar basket={basket}/>
-            <Basket basket={basket} onRemove={onRemove} onClear={onClear}/> 
+            <Basket basket={basket} onAdd={onAdd} onRemove={onRemove} onClear={onClear}/> 
             <Footer/>
         </>
     )

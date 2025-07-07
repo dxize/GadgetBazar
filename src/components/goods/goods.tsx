@@ -44,7 +44,7 @@ const goodsData: Good[] = [
     { id: 26, title: 'Head Phone', price: '$ 150', image: HeadPhone },
     { id: 27, title: 'Digital Camera', price: '$ 500', image: DigitalCamera },
     { id: 28, title: 'Classic Watch', price: '$ 220', image: Watch },
-    ]
+]
 
 function Goods({ onAdd }: GoodsProps) {
     const handleAddToCart = (item: Good) => {
