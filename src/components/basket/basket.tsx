@@ -59,16 +59,20 @@ function Basket({ basket, onRemove, onClear, onAdd }: BasketProps) {
                         <div className={styles['basket__item__title']}>{item.title}</div>
                         <div className={styles['basket__item__price']}>{item.price}</div>
                     </div>
-                    <div className={styles['basket__item__controls']}>
-                        <button onClick={() => handleDecrease(indices)}>-</button>
-                        <button onClick={() => handleIncrease(item)}>+</button>
-                        <span style={{width: '1%'}}>{count}</span>
-                    </div>
                     <button className={styles['basket__item__remove']} onClick={() => handleRemoveItem(indices)}>
                         Remove
                     </button>
+                    <div className={styles['basket__item__controls']}>
+                        <button onClick={() => handleDecrease(indices)}>-</button>
+                        <button onClick={() => handleIncrease(item)}>+</button>
+                        <span style={{width: '1%', fontSize: '18px', fontWeight: '600'}}>{count}</span>
+                    </div>
                 </div>
             ))}
+
+            <button className={styles['basket__create-order']}>
+                Place an Order
+            </button>
         </div>
     )
 }

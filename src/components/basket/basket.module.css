@@ -5,22 +5,23 @@
     flex-direction: column;
     gap: 24px;
     font-family: 'Nunito', sans-serif;
+    color: black;
 }
 
 .basket__title {
-    font-size: 32px;
+    width: 100%;
+    font-size: 40px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 12px;
 }
 
 .basket__clear {
-    align-self: flex-end;
     background: #e74c3c;
     color: #fff;
     border: none;
     border-radius: 6px;
-    padding: 8px 16px;
+    padding: 16px 20px;
     cursor: pointer;
     font-size: 0.9rem;
     transition: background 0.2s ease;
@@ -66,6 +67,7 @@
     flex-direction: column;
     gap: 4px;
     width: 87%;
+    min-width: 450px;
 }
 
 .basket__item__title {
@@ -85,12 +87,14 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    width: 100%;
+    width: 10%;
+    justify-content: end;
+    margin-right: 28px;
 }
 
 .basket__item__controls button {
-    width: 32px;
-    height: 32px;
+    width: 12px;
+    height: 22px;
     background: #3498db;
     color: #fff;
     border: none;
@@ -113,7 +117,7 @@
     transform: scale(0.95);
 }
 
-.basket__item__remove {
+.basket__item__remove { 
     background: #e74c3c;
     color: #fff;
     border: none;
@@ -122,7 +126,7 @@
     cursor: pointer;
     font-size: 0.9rem;
     user-select: none;
-    width: 100%;
+    width: 20%;
 }
 
 .basket__item__remove:hover {
@@ -140,8 +144,36 @@
 
 
 .basket__empty {
-    font-size: 24px;
+    font-size: 80px;
     text-align: center;
-    margin: 80px 0;
+    margin: auto;
     font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+    color: black;
+}
+
+.basket__create-order {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 16px 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+    user-select: none;
+    width: 100%;
+}
+
+.basket__create-order:hover {
+    background: #2980b9;
+    outline: none;
+}
+
+.basket__create-order:focus {
+    outline: none;
+}
+
+.basket__create-order:active {  
+    transform: scale(0.99);
 }
