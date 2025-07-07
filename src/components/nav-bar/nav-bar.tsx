@@ -1,5 +1,5 @@
 import styles from './nav-bar.module.css' 
-import GadgetBazar from '../../assets/GadgetBazar.png'
+import GadgetBazar from '../../assets/images/GadgetBazar.png'
 import { useNavigate } from 'react-router-dom';
 
 function NavBar()

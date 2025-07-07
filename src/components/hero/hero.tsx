@@ -1,10 +1,10 @@
 import styles from './hero.module.css' 
-import Watch from '../../assets/Watch.svg'
-import WhiteArrow from '../../assets/WhiteArrow.svg'
-import PulseIcon from '../../assets/PulseIcon.svg'
-import MusicIcon from '../../assets/MusicIcon.svg'
-import PuzzleIcon from '../../assets/PuzzleIcon.svg'
-import AimIcon from '../../assets/AimIcon.svg'
+import Watch from '../../assets/images/Watch.svg'
+import WhiteArrow from '../../assets/images/WhiteArrow.svg'
+import PulseIcon from '../../assets/images/PulseIcon.svg'
+import MusicIcon from '../../assets/images/MusicIcon.svg'
+import PuzzleIcon from '../../assets/images/PuzzleIcon.svg'
+import AimIcon from '../../assets/images/AimIcon.svg'
 
 interface FunctionButton {
     icon: string;

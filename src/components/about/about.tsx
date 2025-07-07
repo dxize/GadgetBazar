@@ -1,8 +1,8 @@
 import styles from './about.module.css'
-import Delivery from '../../assets/DeliveryIcon.svg'
-import Support from '../../assets/SupportIcon.svg'
-import SpecialOffer from '../../assets/SpecialOfferIcon.svg'
-import Refund from '../../assets/RefundIcon.svg'
+import Delivery from '../../assets/images/DeliveryIcon.svg'
+import Support from '../../assets/images/SupportIcon.svg'
+import SpecialOffer from '../../assets/images/SpecialOfferIcon.svg'
+import Refund from '../../assets/images/RefundIcon.svg'
 
 interface Service {
     icon: string;

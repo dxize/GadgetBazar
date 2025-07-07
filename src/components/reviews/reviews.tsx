@@ -1,10 +1,10 @@
 import styles from './reviews.module.css'
 import type { Review } from '../../types/types'
 import { useState } from 'react'
-import Avatar from '../../assets/Avatar.svg'
-import Avatar2 from '../../assets/VovaB.png'
-import Avatar3 from '../../assets/VovaKrasavetch.jpg'
-import Avatar4 from '../../assets/SmartPersonWallpaperDownload.jpg'
+import Avatar from '../../assets/images/Avatar.svg'
+import Avatar2 from '../../assets/images/VovaB.png'
+import Avatar3 from '../../assets/images/VovaKrasavetch.jpg'
+import Avatar4 from '../../assets/images/SmartPersonWallpaperDownload.jpg'
 
 const reviews: Review[] = [
   {

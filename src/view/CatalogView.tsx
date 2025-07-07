@@ -12,7 +12,7 @@ function CatalogView() {
     return (
         <>
             <NavBar/>
-            <Goods/>
+            <Goods onAdd={(item) => console.log('Selected product:', item.id, item.title)} />
             <Footer/>
         </>
     )

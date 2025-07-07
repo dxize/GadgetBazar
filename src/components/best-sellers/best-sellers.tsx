@@ -1,8 +1,8 @@
 import styles from './best-sellers.module.css'
-import SmartWatch from '../../assets/SmartWatch.svg'
-import Headphone from '../../assets/Headphone.svg'
-import DigitalCamera from '../../assets/DigitalCamera.svg'
-import WhiteArrow from '../../assets/WhiteArrow.svg'
+import SmartWatch from '../../assets/images/SmartWatch.svg'
+import Headphone from '../../assets/images/Headphone.svg'
+import DigitalCamera from '../../assets/images/DigitalCamera.svg'
+import WhiteArrow from '../../assets/images/WhiteArrow.svg'
 import { useNavigate } from 'react-router-dom'
 
 interface Product {

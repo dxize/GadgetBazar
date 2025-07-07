@@ -36,7 +36,7 @@
     width: 100%;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.47)),
-        url('../../assets/BackgroundWatch.svg');
+        url('../../assets/images/BackgroundWatch.svg');
     background-size: 100% 100%, cover;
     background-position: top, center;
     background-repeat: no-repeat, no-repeat;

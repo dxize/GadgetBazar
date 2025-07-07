@@ -1,7 +1,7 @@
 import styles from './discover.module.css'
-import WhiteArrow from '../../assets/WhiteArrow.svg'
-import HeadPhoneV1 from '../../assets/HeadPhoneV1.svg'
-import HeadPhoneV2 from '../../assets/HeadPhoneV2.svg'
+import WhiteArrow from '../../assets/images/WhiteArrow.svg'
+import HeadPhoneV1 from '../../assets/images/HeadPhoneV1.svg'
+import HeadPhoneV2 from '../../assets/images/HeadPhoneV2.svg'
 
 interface DiscoverItemProps {
     title: React.ReactNode;

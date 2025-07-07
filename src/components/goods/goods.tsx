@@ -1,14 +1,18 @@
 import styles from './goods.module.css'
-import SmartWatch from '../../assets/SmartWatch.svg'
-import HeadPhone from '../../assets/HeadPhone.svg'
-import DigitalCamera from '../../assets/DigitalCamera.svg'
-import Watch from '../../assets/Watch.svg'
+import SmartWatch from '../../assets/images/SmartWatch.svg'
+import HeadPhone from '../../assets/images/HeadPhone.svg'
+import DigitalCamera from '../../assets/images/DigitalCamera.svg'
+import Watch from '../../assets/images/Watch.svg'
 
-interface Good {
+export interface Good {
   id: number
   title: string
   price: string
   image: string
+}
+
+interface GoodsProps {
+  onAdd?: (item: Good) => void
 }
 
 const goodsData: Good[] = [
@@ -42,33 +46,34 @@ const goodsData: Good[] = [
     { id: 28, title: 'Classic Watch', price: '$ 220', image: Watch },
     ]
 
-function Goods() {
-  const handleAddToCart = (item: Good) => {
-    console.log('Add to basket:', item)
-  }
+function Goods({ onAdd }: GoodsProps) {
+    const handleAddToCart = (item: Good) => {
+        if (onAdd) {
+        onAdd(item)
+        } else {
+        console.log('Add to basket:', item)
+        }
+    }
 
-  return (
-    <div className={styles['goods']}>
-        <div className={styles['goods__title']}>Our Products</div>
-        {goodsData.map((g) => (
-            <div key={g.id} className={styles['card']}>
-                <div className={styles['card__content']}>
-                    <img src={g.image} alt={g.title} className={styles['card__content__image']} />
-                    <div className={styles['card__content__info']}>
-                        <div className={styles['card__content__info__title']}>{g.title}</div>
-                        <div className={styles['card__content__info__price']}>{g.price}</div>
+    return (
+        <div className={styles['goods']}>
+            <div className={styles['goods__title']}>Our Products</div>
+            {goodsData.map((g) => (
+                <div key={g.id} className={styles['card']}>
+                    <div className={styles['card__content']}>
+                        <img src={g.image} alt={g.title} className={styles['card__content__image']} />
+                        <div className={styles['card__content__info']}>
+                            <div className={styles['card__content__info__title']}>{g.title}</div>
+                            <div className={styles['card__content__info__price']}>{g.price}</div>
+                        </div>
                     </div>
+                    <button className={styles['card__button']} onClick={() => handleAddToCart(g)}>
+                        Add to Basket
+                    </button>
                 </div>
-            <button
-                className={styles['card__button']}
-                onClick={() => handleAddToCart(g)}
-            >
-                Add to Basket
-            </button>
-            </div>
-      ))}
-    </div>
-  )
+            ))}
+        </div>
+    )
 }
 
 export default Goods
