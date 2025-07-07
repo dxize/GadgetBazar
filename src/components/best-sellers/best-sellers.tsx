@@ -3,6 +3,7 @@ import SmartWatch from '../../assets/SmartWatch.svg'
 import Headphone from '../../assets/Headphone.svg'
 import DigitalCamera from '../../assets/DigitalCamera.svg'
 import WhiteArrow from '../../assets/WhiteArrow.svg'
+import { useNavigate } from 'react-router-dom'
 
 interface Product {
     background: string;
@@ -26,6 +27,12 @@ function ProductCard({ background, title, price }: Product) {
 
 function BestSellers()
 {
+    const navigate = useNavigate();
+
+    const handleCatalogClick = () => {
+        navigate('/catalog');
+    }
+
     const products: Product[] = [
         { background: SmartWatch, title: 'Smart Watch', price: '$ 300' },
         { background: Headphone, title: 'Head Phone', price: '$ 300' },
@@ -41,7 +48,7 @@ function BestSellers()
                     <ProductCard key={idx} {...p} />
                 ))}
             </div>
-            <button className={styles['best-sellers__products__button']}>
+            <button className={styles['best-sellers__products__button']} onClick={handleCatalogClick}>
                 Shop Here
                 <img src={WhiteArrow} alt="WhiteArrow" className={styles['best-sellers__products__button__arrow']}></img>
             </button>
