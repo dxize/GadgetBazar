@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './basket.module.css'
-import type { Good } from '../goods/goods'
+import type { Good } from '../../types/types'
 
 interface BasketProps {
     basket: Good[]

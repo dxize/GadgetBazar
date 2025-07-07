@@ -1,6 +1,6 @@
 import NavBar from "../components/nav-bar/nav-bar"
 import Footer from "../components/footer/footer"
-import type { Good } from "../components/goods/goods"
+import type { Good } from "../types/types"
 import Basket from "../components/basket/basket"
 
 interface BasketViewProps {

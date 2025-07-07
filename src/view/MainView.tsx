@@ -7,7 +7,7 @@ import Reviews from '../components/reviews/reviews.tsx'
 import Footer from '../components/footer/footer.tsx'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import type { Good } from '../components/goods/goods'
+import type { Good } from '../types/types'
 
 interface MainViewProps {
     basket: Good[]

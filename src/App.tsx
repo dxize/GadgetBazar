@@ -4,7 +4,7 @@ import BasketView from './view/BasketView.tsx'
 import CatalogView from './view/CatalogView.tsx'
 import './App.css'
 import { useState } from 'react'
-import type { Good } from './components/goods/goods'
+import type { Good } from './types/types'
 
 function App()    
 {

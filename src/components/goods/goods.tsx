@@ -3,13 +3,7 @@ import SmartWatch from '../../assets/images/SmartWatch.svg'
 import HeadPhone from '../../assets/images/HeadPhone.svg'
 import DigitalCamera from '../../assets/images/DigitalCamera.svg'
 import Watch from '../../assets/images/Watch.svg'
-
-export interface Good {
-  id: number
-  title: string
-  price: string
-  image: string
-}
+import type { Good } from '../../types/types'
 
 interface GoodsProps {
   onAdd?: (item: Good) => void

@@ -1,7 +1,7 @@
 import styles from './nav-bar.module.css' 
 import GadgetBazar from '../../assets/images/GadgetBazar.png'
 import { useNavigate, useLocation } from 'react-router-dom';
-import type { Good } from '../goods/goods';
+import type { Good } from '../../types/types';
 import RedPoint from '../../assets/images/RedPoint.png';
 
 interface NavBarProps {
