@@ -6,11 +6,10 @@ interface BasketProps {
     basket: Good[]
     onRemove: (index: number) => void
     onClear: () => void
-    onAdd?: (item: Good) => void // optional, needed for the "+" button
+    onAdd?: (item: Good) => void
 }
 
 function Basket({ basket, onRemove, onClear, onAdd }: BasketProps) {
-    // Aggregate identical goods by id and keep track of their indices in the original basket array
     const aggregated = React.useMemo(() => {
         const map = new Map<number, { item: Good; count: number; indices: number[] }>()
         basket.forEach((item, index) => {
@@ -34,12 +33,11 @@ function Basket({ basket, onRemove, onClear, onAdd }: BasketProps) {
 
     const handleDecrease = (indices: number[]) => {
         if (indices.length === 0) return
-        const lastIndex = indices[indices.length - 1] // remove the last to avoid index shift issues
+        const lastIndex = indices[indices.length - 1]
         onRemove(lastIndex)
     }
 
     const handleRemoveItem = (indices: number[]) => {
-        // remove all occurrences of the item, starting from the highest index to avoid re-indexing problems
         [...indices].reverse().forEach((idx) => onRemove(idx))
     }
 
