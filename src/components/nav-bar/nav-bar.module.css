@@ -1,7 +1,7 @@
 .nav-bar
 {
     display: flex;
-    width: 86%;
+    width: 90%;
     margin: 0 auto;
     position: sticky;
     z-index: 1000;
@@ -17,14 +17,14 @@
     width: 15%;
     height: auto;
     object-fit: contain;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 10px 10px;
     user-select: none;
 }
 
 .nav-bar__button
 {
     padding: 0;
-    margin: auto;
+    margin: auto 0;
     width: 3.8%;
     font-size: clamp(10px, 2vw, 18px);
     background: transparent;

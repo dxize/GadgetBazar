@@ -37,7 +37,9 @@ function App()
   useEffect(() => {
     try {
       localStorage.setItem('basket', JSON.stringify(basket))
-    } catch {
+    } 
+    catch 
+    {
       console.error('Error saving basket to localStorage')
     }
   }, [basket])
