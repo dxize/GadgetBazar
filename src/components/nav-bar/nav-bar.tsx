@@ -64,7 +64,6 @@ function NavBar({ basket }: NavBarProps)
                     <path d="M13 1L7 6L1 1" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
             </button>
-            {/* <button className={styles['nav-bar__start-button']} onClick={handleCatalogClick}>Get Started</button> */}
         </div>
     )   
 }

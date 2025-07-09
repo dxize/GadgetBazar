@@ -22,7 +22,6 @@ function App()
 
   const handleAddToCart = (item: Good) => {
     setBasket(prev => [...prev, item])
-    console.log(basket)
   }
 
   const removeFromBasket = (index: number) => {
