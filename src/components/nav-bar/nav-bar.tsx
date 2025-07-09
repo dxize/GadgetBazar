@@ -28,6 +28,7 @@ function NavBar({ basket }: NavBarProps)
 
     const handleBasketClick = () => {
         navigate('/basket');
+        window.scroll(0, 0);
     }
 
     const handleCatalogClick = () => {
