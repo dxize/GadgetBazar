@@ -3,12 +3,22 @@ import MainView from './view/MainView.tsx'
 import BasketView from './view/BasketView.tsx'
 import CatalogView from './view/CatalogView.tsx'
 import './App.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import type { Good } from './types/types'
 
 function App()    
 {
-  const [basket, setBasket] = useState<Good[]>([])
+  const [basket, setBasket] = useState<Good[]>(() => {
+    try 
+    {
+      const stored = localStorage.getItem('basket')
+      return stored ? (JSON.parse(stored) as Good[]) : []
+    } 
+    catch 
+    {
+      return []
+    }
+  })
 
   const handleAddToCart = (item: Good) => {
     setBasket(prev => [...prev, item])
@@ -22,6 +32,15 @@ function App()
   const clearBasket = () => {
     setBasket([])
   }
+
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('basket', JSON.stringify(basket))
+    } catch {
+      console.error('Error saving basket to localStorage')
+    }
+  }, [basket])
 
   return (
     <BrowserRouter>
