@@ -49,7 +49,7 @@ function App()
       <Routes>
         <Route path="/" element={<MainView basket={basket}/>} />
         <Route path="/basket" element={<BasketView basket={basket} onAdd={handleAddToCart} onRemove={removeFromBasket} onClear={clearBasket} />} />
-        <Route path="/catalog" element={<CatalogView onAdd={handleAddToCart} basket={basket} />} />
+        <Route path="/catalog" element={<CatalogView onAdd={handleAddToCart} onRemove={removeFromBasket} basket={basket} />} />
       </Routes>
     </BrowserRouter>
   )

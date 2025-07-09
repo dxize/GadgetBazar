@@ -6,10 +6,11 @@ import type { Good } from "../types/types"
 
 interface CatalogViewProps {
     onAdd: (item: Good) => void
+    onRemove: (index: number) => void
     basket: Good[]
 }
 
-function CatalogView({ onAdd, basket }: CatalogViewProps) {
+function CatalogView({ onAdd, onRemove, basket }: CatalogViewProps) {
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'auto' });
     }, []);
@@ -17,7 +18,7 @@ function CatalogView({ onAdd, basket }: CatalogViewProps) {
     return (
         <>
             <NavBar basket={basket}/>
-            <Goods onAdd={onAdd}/>
+            <Goods onAdd={onAdd} onRemove={onRemove} basket={basket}/>
             <Footer/>
         </>
     )

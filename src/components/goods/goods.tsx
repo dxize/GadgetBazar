@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './goods.module.css'
 import SmartWatch from '../../assets/images/SmartWatch.svg'
 import HeadPhone from '../../assets/images/HeadPhone.svg'
@@ -7,6 +8,8 @@ import type { Good } from '../../types/types'
 
 interface GoodsProps {
   onAdd?: (item: Good) => void
+  onRemove?: (index: number) => void
+  basket?: Good[]
 }
 
 const goodsData: Good[] = [
@@ -40,34 +43,73 @@ const goodsData: Good[] = [
     { id: 28, title: 'Classic Watch', price: '$ 220', image: Watch },
 ]
 
-function Goods({ onAdd }: GoodsProps) {
-    const handleAddToCart = (item: Good) => {
-        if (onAdd) {
-        onAdd(item)
-        } else {
-        console.log('Add to basket:', item)
-        }
-    }
+function Goods({ onAdd, onRemove, basket = [] }: GoodsProps) {
+  const indexMap = React.useMemo(() => {
+    const map = new Map<number, number[]>()
+    basket.forEach((item, idx) => {
+      if (!map.has(item.id)) map.set(item.id, [])
+      map.get(item.id)!.push(idx)
+    })
+    return map
+  }, [basket])
 
-    return (
-        <div className={styles['goods']}>
-            <div className={styles['goods__title']}>Our Products</div>
-            {goodsData.map((g) => (
-                <div key={g.id} className={styles['card']}>
-                    <div className={styles['card__content']}>
-                        <img src={g.image} alt={g.title} className={styles['card__content__image']} />
-                        <div className={styles['card__content__info']}>
-                            <div className={styles['card__content__info__title']}>{g.title}</div>
-                            <div className={styles['card__content__info__price']}>{g.price}</div>
-                        </div>
-                    </div>
-                    <button className={styles['card__button']} onClick={() => handleAddToCart(g)}>
-                        Add to Basket
-                    </button>
+  const handleAdd = (item: Good) => {
+    onAdd?.(item)
+  }
+
+  const handleDecrease = (id: number) => {
+    const indices = indexMap.get(id)
+    if (!indices || indices.length === 0 || !onRemove) return
+    onRemove(indices[indices.length - 1])
+  }
+
+  const handleRemoveAll = (id: number) => {
+    const indices = indexMap.get(id)
+    if (!indices || !onRemove) return
+    [...indices].reverse().forEach(onRemove)
+  }
+
+  return (
+    <div className={styles['goods']}>
+      <div className={styles['goods__title']}>Our Products</div>
+      {goodsData.map((g) => {
+        const indices = indexMap.get(g.id) || []
+        const count = indices.length
+        return (
+          <div key={g.id} className={styles['card']}>
+            <div className={styles['card__content']}>
+              <img src={g.image} alt={g.title} className={styles['card__content__image']} />
+              <div className={styles['card__content__info']}>
+                <div className={styles['card__content__info__title']}>{g.title}</div>
+                <div className={styles['card__content__info__price']}>{g.price}</div>
+              </div>
+            </div>
+
+            {count === 0 ? (
+              <button className={styles['card__button']} onClick={() => handleAdd(g)}>
+                Add to Basket
+              </button>
+            ) : (
+              <div className={`${styles['card__button__after']} ${styles['card__controls']}`}>
+                <button className={styles['card__controls__remove']} onClick={() => handleRemoveAll(g.id)}>
+                  Remove
+                </button>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', width: '50%' }}>
+                  <button className={styles['card__controls__circle']} onClick={() => handleDecrease(g.id)}>
+                    -
+                  </button>
+                  <span style={{ fontWeight: '600', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', userSelect: 'none' }}>{count}</span>
+                  <button className={styles['card__controls__circle']} onClick={() => handleAdd(g)}>
+                    +
+                  </button>
                 </div>
-            ))}
-        </div>
-    )
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
 }
 
 export default Goods

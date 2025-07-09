@@ -106,3 +106,68 @@
 {
     transform: scale(0.96);   
 }
+
+.card__controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4%;
+}
+
+.card__controls__remove {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    user-select: none;
+    width: 16%;
+}
+
+.card__controls__remove:hover {
+    background: #c0392b;
+    outline: none;
+}
+
+.card__controls__remove:focus {
+    outline: none;
+}
+
+.card__controls__remove:active {
+    transform: scale(0.96);
+}
+
+.card__controls__circle {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 26px;
+    user-select: none;
+}
+
+.card__controls__circle:hover {
+    outline: none;
+}
+
+.card__controls__circle:focus {
+    outline: none;
+}
+
+.card__controls__circle:active {
+    transform: scale(0.95);
+}
+
+.card__button__after {
+    width: 100%;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 0 0 6px 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
