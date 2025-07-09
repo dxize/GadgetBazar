@@ -52,23 +52,30 @@ function Basket({ basket, onRemove, onClear, onAdd }: BasketProps) {
                 Clear Basket
             </button>
 
-            {aggregated.map(({ item, count, indices }) => (
-                <div key={item.id} className={styles['basket__item']}>
-                    <img src={item.image} alt={item.title} className={styles['basket__item__image']} />
-                    <div className={styles['basket__item__info']}>
-                        <div className={styles['basket__item__title']}>{item.title}</div>
-                        <div className={styles['basket__item__price']}>{item.price}</div>
+            {aggregated.map(({ item, count, indices }) => {
+                const totalPrice = (() => {
+                    const numericPrice = parseFloat(item.price.replace(/[^0-9.-]+/g, ''))
+                    if (isNaN(numericPrice)) return item.price
+                    return `$ ${numericPrice * count}`
+                })()
+                return (
+                    <div key={item.id} className={styles['basket__item']}>
+                        <img src={item.image} alt={item.title} className={styles['basket__item__image']} />
+                        <div className={styles['basket__item__info']}>
+                            <div className={styles['basket__item__title']}>{item.title}</div>
+                            <div className={styles['basket__item__price']}>{totalPrice}</div>
+                        </div>
+                        <button className={styles['basket__item__remove']} onClick={() => handleRemoveItem(indices)}>
+                            Remove
+                        </button>
+                        <div className={styles['basket__item__controls']}>
+                            <button onClick={() => handleDecrease(indices)}>-</button>
+                            <button onClick={() => handleIncrease(item)}>+</button>
+                            <span style={{width: '1%', fontSize: '18px', fontWeight: '600'}}>{count}</span>
+                        </div>
                     </div>
-                    <button className={styles['basket__item__remove']} onClick={() => handleRemoveItem(indices)}>
-                        Remove
-                    </button>
-                    <div className={styles['basket__item__controls']}>
-                        <button onClick={() => handleDecrease(indices)}>-</button>
-                        <button onClick={() => handleIncrease(item)}>+</button>
-                        <span style={{width: '1%', fontSize: '18px', fontWeight: '600'}}>{count}</span>
-                    </div>
-                </div>
-            ))}
+                )
+            })}
 
             <button className={styles['basket__create-order']}>
                 Place an Order
