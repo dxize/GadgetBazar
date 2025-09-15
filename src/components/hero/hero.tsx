@@ -1,4 +1,4 @@
-import styles from './hero.module.css' 
+import styles from './hero.module.scss' 
 import Watch from '../../assets/images/Watch.svg'
 import WhiteArrow from '../../assets/images/WhiteArrow.svg'
 import PulseIcon from '../../assets/images/PulseIcon.svg'

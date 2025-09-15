@@ -1,4 +1,4 @@
-import styles from './discover.module.css'
+import styles from './discover.module.scss'
 import WhiteArrow from '../../assets/images/WhiteArrow.svg'
 import HeadPhoneV1 from '../../assets/images/HeadPhoneV1.svg'
 import HeadPhoneV2 from '../../assets/images/HeadPhoneV2.svg'

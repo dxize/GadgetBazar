@@ -1,4 +1,4 @@
-import styles from './reviews.module.css'
+import styles from './reviews.module.scss'
 import type { Review } from '../../types/types'
 import { useState } from 'react'
 import Avatar from '../../assets/images/Avatar.svg'

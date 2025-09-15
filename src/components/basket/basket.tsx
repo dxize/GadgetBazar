@@ -1,15 +1,10 @@
 import React from 'react'
-import styles from './basket.module.css'
+import styles from './basket.module.scss'
+import { useBasketStore } from '../../store/basketStore'
 import type { Good } from '../../types/types'
 
-interface BasketProps {
-    basket: Good[]
-    onRemove: (index: number) => void
-    onClear: () => void
-    onAdd?: (item: Good) => void
-}
-
-function Basket({ basket, onRemove, onClear, onAdd }: BasketProps) {
+function Basket() {
+    const { basket, addToBasket, removeFromBasket, clearBasket } = useBasketStore();
     const aggregated = React.useMemo(() => {
         const map = new Map<number, { item: Good; count: number; indices: number[] }>()
         basket.forEach((item, index) => {
@@ -23,22 +18,18 @@ function Basket({ basket, onRemove, onClear, onAdd }: BasketProps) {
         return Array.from(map.values())
     }, [basket])
 
-    const handleIncrease = (item: Good) => {
-        if (onAdd) {
-            onAdd(item)
-        } else {
-            console.warn('onAdd handler not provided')
-        }
+    const handleIncrease = (item: any) => {
+        addToBasket(item)
     }
 
     const handleDecrease = (indices: number[]) => {
         if (indices.length === 0) return
         const lastIndex = indices[indices.length - 1]
-        onRemove(lastIndex)
+        removeFromBasket(lastIndex)
     }
 
     const handleRemoveItem = (indices: number[]) => {
-        [...indices].reverse().forEach((idx) => onRemove(idx))
+        [...indices].reverse().forEach((idx) => removeFromBasket(idx))
     }
 
     if (basket.length === 0) {
@@ -48,7 +39,7 @@ function Basket({ basket, onRemove, onClear, onAdd }: BasketProps) {
     return (
         <div className={styles['basket']}>
             <h2 className={styles['basket__title']}>Basket</h2>
-            <button className={styles['basket__clear']} onClick={onClear}>
+            <button className={styles['basket__clear']} onClick={clearBasket}>
                 Clear Basket
             </button>
 

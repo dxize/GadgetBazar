@@ -1,4 +1,4 @@
-import styles from './about.module.css'
+import styles from './about.module.scss'
 import Delivery from '../../assets/images/DeliveryIcon.svg'
 import Support from '../../assets/images/SupportIcon.svg'
 import SpecialOffer from '../../assets/images/SpecialOfferIcon.svg'

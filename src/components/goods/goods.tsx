@@ -1,16 +1,11 @@
 import React from 'react'
-import styles from './goods.module.css'
+import styles from './goods.module.scss'
 import SmartWatch from '../../assets/images/SmartWatch.svg'
 import HeadPhone from '../../assets/images/HeadPhone.svg'
 import DigitalCamera from '../../assets/images/DigitalCamera.svg'
 import Watch from '../../assets/images/Watch.svg'
 import type { Good } from '../../types/types'
-
-interface GoodsProps {
-  onAdd?: (item: Good) => void
-  onRemove?: (index: number) => void
-  basket?: Good[]
-}
+import { useBasketStore } from '../../store/basketStore'
 
 const goodsData: Good[] = [
     { id: 1, title: 'Smart Watch', price: '$ 300', image: SmartWatch },
@@ -43,7 +38,9 @@ const goodsData: Good[] = [
     { id: 28, title: 'Classic Watch', price: '$ 220', image: Watch },
 ]
 
-function Goods({ onAdd, onRemove, basket = [] }: GoodsProps) {
+function Goods() {
+  const { basket, addToBasket, removeFromBasket } = useBasketStore();
+  
   const indexMap = React.useMemo(() => {
     const map = new Map<number, number[]>()
     basket.forEach((item, idx) => {
@@ -54,19 +51,19 @@ function Goods({ onAdd, onRemove, basket = [] }: GoodsProps) {
   }, [basket])
 
   const handleAdd = (item: Good) => {
-    onAdd?.(item)
+    addToBasket(item)
   }
 
   const handleDecrease = (id: number) => {
     const indices = indexMap.get(id)
-    if (!indices || indices.length === 0 || !onRemove) return
-    onRemove(indices[indices.length - 1])
+    if (!indices || indices.length === 0) return
+    removeFromBasket(indices[indices.length - 1])
   }
 
   const handleRemoveAll = (id: number) => {
     const indices = indexMap.get(id)
-    if (!indices || !onRemove) return
-    [...indices].reverse().forEach(onRemove)
+    if (!indices) return
+    [...indices].reverse().forEach(removeFromBasket)
   }
 
   return (

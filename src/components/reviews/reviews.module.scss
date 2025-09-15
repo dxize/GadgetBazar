@@ -1,5 +1,4 @@
-.title
-{
+.title {
     margin-top: 56px;
     font-family: Nunito;
     font-weight: 800;
@@ -113,13 +112,11 @@
     outline: none;
 }
 
-
 .off {
     visibility: hidden;
     opacity: 0;
     transform: translateX(0) scale(0.9);
 }
-
 
 .prevArrow,
 .nextArrow {
@@ -164,3 +161,5 @@
     text-align: center;
     color: rgba(0, 0, 0, 1);
 }
+
+

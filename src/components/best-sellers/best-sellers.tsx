@@ -1,4 +1,4 @@
-import styles from './best-sellers.module.css'
+import styles from './best-sellers.module.scss'
 import SmartWatch from '../../assets/images/SmartWatch.svg'
 import Headphone from '../../assets/images/Headphone.svg'
 import DigitalCamera from '../../assets/images/DigitalCamera.svg'

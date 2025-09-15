@@ -1,17 +1,14 @@
-import styles from './nav-bar.module.css' 
+import styles from './nav-bar.module.scss' 
 import GadgetBazar from '../../assets/images/GadgetBazar.png'
 import { useNavigate, useLocation } from 'react-router-dom';
-import type { Good } from '../../types/types';
 import RedPoint from '../../assets/images/RedPoint.png';
+import { useBasketStore } from '../../store/basketStore';
 
-interface NavBarProps {
-    basket: Good[]
-}
-
-function NavBar({ basket }: NavBarProps)
+function NavBar()
 {
     const navigate = useNavigate();
     const location = useLocation();
+    const basket = useBasketStore((state) => state.basket);
 
     const handleHomeClick = () => {
         navigate('/');
