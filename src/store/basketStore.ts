@@ -1,16 +1,9 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import type { Good } from '../types/types'
-
-interface BasketState {
-  basket: Good[]
-  addToBasket: (item: Good) => void
-  removeFromBasket: (index: number) => void
-  clearBasket: () => void
-}
+import type { Good, BasketState } from '../types/types'
 
 export const useBasketStore = create<BasketState>()(
-  persist(
+  persist<BasketState>(
     (set) => ({
       basket: [],
       addToBasket: (item: Good) =>

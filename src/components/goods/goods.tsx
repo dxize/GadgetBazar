@@ -5,8 +5,9 @@ import HeadPhone from '../../assets/images/HeadPhone.svg'
 import DigitalCamera from '../../assets/images/DigitalCamera.svg'
 import Watch from '../../assets/images/Watch.svg'
 import type { Good } from '../../types/types'
-import { useBasketStore } from '../../store/basketStore'
-import { shallow } from 'zustand/shallow'
+import { useBasketStore} from '../../store/basketStore'
+import { useShallow } from 'zustand/react/shallow'
+import type { BasketState } from '../../types/types'
 
 const goodsData: Good[] = [
     { id: 1, title: 'Smart Watch', price: '$ 300', image: SmartWatch },
@@ -42,11 +43,14 @@ const goodsData: Good[] = [
 
 function Goods() {
   //объяснить shallow и зачем такой синтаксис
-  const { basket, addToBasket, removeFromBasket } = useBasketStore();
-  // const { basket, addToBasket, removeFromBasket } = useBasketStore(
-  //   (state) => ({ basket: state.basket, addToBasket: state.addToBasket, removeFromBasket: state.removeFromBasket }),
-  //   shallow  
-  // );  
+  // const { basket, addToBasket, removeFromBasket } = useBasketStore();
+  const { basket, addToBasket, removeFromBasket } = useBasketStore(
+    useShallow((state: BasketState) => ({
+      basket: state.basket,
+      addToBasket: state.addToBasket,
+      removeFromBasket: state.removeFromBasket
+    }))
+  );  
 
   
   
