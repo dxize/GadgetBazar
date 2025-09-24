@@ -6,6 +6,7 @@ import DigitalCamera from '../../assets/images/DigitalCamera.svg'
 import Watch from '../../assets/images/Watch.svg'
 import type { Good } from '../../types/types'
 import { useBasketStore } from '../../store/basketStore'
+import { shallow } from 'zustand/shallow'
 
 const goodsData: Good[] = [
     { id: 1, title: 'Smart Watch', price: '$ 300', image: SmartWatch },
@@ -38,8 +39,16 @@ const goodsData: Good[] = [
     { id: 28, title: 'Classic Watch', price: '$ 220', image: Watch },
 ]
 
+
 function Goods() {
+  //объяснить shallow и зачем такой синтаксис
   const { basket, addToBasket, removeFromBasket } = useBasketStore();
+  // const { basket, addToBasket, removeFromBasket } = useBasketStore(
+  //   (state) => ({ basket: state.basket, addToBasket: state.addToBasket, removeFromBasket: state.removeFromBasket }),
+  //   shallow  
+  // );  
+
+  
   
   const indexMap = React.useMemo(() => {
     const map = new Map<number, number[]>()
@@ -51,9 +60,9 @@ function Goods() {
   }, [basket])
 
   const handleAdd = (item: Good) => {
+    // useBasketStore.getState().addToBasket(item)// почитать в каких случаях getState а в каких деструктуризация
     addToBasket(item)
-  }
-
+  }                                    
   const handleDecrease = (id: number) => {
     const indices = indexMap.get(id)
     if (!indices || indices.length === 0) return

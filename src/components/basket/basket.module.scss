@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 .basket {
     width: 90%;
     margin: 60px auto;
@@ -17,8 +19,8 @@
 }
 
 .basket__clear {
-    background: #e74c3c;
-    color: #fff;
+    background: $danger;
+    color: $white;
     border: none;
     border-radius: 6px;
     padding: 16px 20px;
@@ -30,7 +32,7 @@
 }
 
 .basket__clear:hover {
-    background: #c0392b;
+    background: $danger-dark;
     outline: none;
 }
 
@@ -46,10 +48,10 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    background: #f3f3f3;
+    background: $bg-gray;
     padding: 16px 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    @include shadow-soft;
     width: 100%;
 }
 
@@ -79,7 +81,7 @@
 .basket__item__price {  
     width: 100%;
     font-weight: 700;
-    color: #3498db;
+    color: $primary;
     font-size: 0.95rem;
 }
 
@@ -95,8 +97,8 @@
 .basket__item__controls button {
     width: 12px;
     height: 22px;
-    background: #3498db;
-    color: #fff;
+    background: $primary;
+    color: $white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -105,7 +107,7 @@
 }
 
 .basket__item__controls button:hover {
-    background: #2980b9;
+    background: $primary-dark;
     outline: none;
 }
 
@@ -118,8 +120,8 @@
 }
 
 .basket__item__remove { 
-    background: #e74c3c;
-    color: #fff;
+    background: $danger;
+    color: $white;
     border: none;
     border-radius: 6px;
     padding: 8px 12px;
@@ -130,7 +132,7 @@
 }
 
 .basket__item__remove:hover {
-    background: #c0392b;
+    background: $danger-dark;
     outline: none;
 }
 
@@ -152,8 +154,8 @@
 }
 
 .basket__create-order {
-    background: #3498db;
-    color: #fff;
+    background: $primary;
+    color: $white;
     border: none;
     border-radius: 6px;
     padding: 16px 20px;
@@ -165,7 +167,7 @@
 }
 
 .basket__create-order:hover {
-    background: #2980b9;
+    background: $primary-dark;
     outline: none;
 }
 

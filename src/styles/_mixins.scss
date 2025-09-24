@@ -1,0 +1,31 @@
+@use './variables' as *;
+@mixin button-reset {
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin focus-ring-none {
+  &:focus { outline: none; }
+  &:hover { outline: none; }
+  &:active { transform: scale(0.96); }
+}
+
+@mixin shadow-soft {
+  box-shadow: 0 4px 12px $black-05;
+}
+
+@mixin shadow-card {
+  box-shadow: 0 16px 24px -16px $black-30;
+}
+
+@mixin text-strong($weight: 700) {
+  font-weight: $weight;
+}
+
+@mixin rounded($radius: 6px) {
+  border-radius: $radius;
+}
+
+

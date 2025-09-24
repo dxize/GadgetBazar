@@ -1,3 +1,6 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
 .goods {
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +29,7 @@
   box-shadow: none;
   transition: transform 0.2s ease;
   margin-bottom: 60px;
-  background: #f3f3f3;
+  background: $bg-gray;
 }
 
 .card:hover {
@@ -49,7 +52,7 @@
   height: 90%;
   user-select: none;
   border-radius: 12px 12px 0 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  @include shadow-soft;
 }
 
 .card__content__info {
@@ -73,15 +76,15 @@
   width: 100%;
   height: 100%;
   font-weight: 700;
-  color: #3498db;
+  color: $primary;
   text-align: center;
   font-family: 'Nunito', sans-serif;
 }
 
 .card__button {
   width: 100%;
-  background: #3498db;
-  color: #fff;
+  background: $primary;
+  color: $white;
   border: none;
   border-radius: 0 0 6px 6px;
   cursor: pointer;
@@ -93,7 +96,7 @@
 }
 
 .card__button:hover {
-  background: #2980b9;
+  background: $primary-dark;
   outline: none;
 }
 
@@ -113,8 +116,8 @@
 }
 
 .card__controls__remove {
-  background: #e74c3c;
-  color: #fff;
+  background: $danger;
+  color: $white;
   border: none;
   border-radius: 6px;
   padding: 6px 10px;
@@ -124,7 +127,7 @@
 }
 
 .card__controls__remove:hover {
-  background: #c0392b;
+  background: $danger-dark;
   outline: none;
 }
 
@@ -137,8 +140,8 @@
 }
 
 .card__controls__circle {
-  background: #3498db;
-  color: #fff;
+  background: $primary;
+  color: $white;
   border: none;
   width: 26px;
   height: 26px;
@@ -162,8 +165,8 @@
 
 .card__button__after {
   width: 100%;
-  background: #3498db;
-  color: #fff;
+  background: $primary;
+  color: $white;
   border: none;
   border-radius: 0 0 6px 6px;
   cursor: pointer;

@@ -1,3 +1,6 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
 .about {
     width: 100%;
 }
@@ -12,7 +15,7 @@
     font-size: 36px;
     line-height: 100%;
     letter-spacing: 0%;
-    color: rgba(0, 0, 0, 1);   
+    color: $text-dark;   
 }
 
 .about__subtitle    
@@ -26,7 +29,7 @@
     line-height: 173%;
     letter-spacing: 0%;
     text-align: center;
-    color: rgba(0, 0, 0, 1);    
+    color: $text-dark;    
 }
 
 .about__services
@@ -57,7 +60,7 @@
     margin: auto 0;
     width: 32%;
     height: 246px;
-    background-color: rgba(187, 222, 251, 1);
+    background-color: $accent-light;
     border-radius: 12px;
 }
 
@@ -65,7 +68,7 @@
 {
     width: 14%;
     aspect-ratio: 1 / 1;
-    background-color: rgba(52, 152, 219, 1);
+    background-color: $primary;
     border-radius: 9px;
     margin-top: 23px;
     margin-left: 9%;
@@ -109,7 +112,7 @@
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0%;
-    color: rgba(0, 0, 0, 1);
+    color: $text-dark;
 }
 
 

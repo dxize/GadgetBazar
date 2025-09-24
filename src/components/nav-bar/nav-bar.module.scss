@@ -1,3 +1,6 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
 .nav-bar {
   display: flex;
   width: 90%;
@@ -6,7 +9,7 @@
   z-index: 1000;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: $white-80;
   backdrop-filter: blur(1px);
   border-radius: 10px;
 }
@@ -20,26 +23,15 @@
 }
 
 .nav-bar__button {
-  padding: 0;
+  @include button-reset;
   margin: auto 0;
   width: 3.8%;
   font-size: clamp(10px, 2vw, 18px);
-  background: transparent;
-  font-family: 'Nunito', sans-serif;
+  font-family: $font-family;
   max-height: 30px;
 }
 
-.nav-bar__button:focus {
-  outline: none;
-}
-
-.nav-bar__button:hover {
-  outline: none;
-}
-
-.nav-bar__button:active {
-  transform: scale(0.96);
-}
+.nav-bar__button { @include focus-ring-none; }
 
 .nav-bar__search-basket {
   width: 100%;
@@ -62,27 +54,17 @@
   width: 10%;
   border: none;
   cursor: pointer;
-  font-family: 'Nunito', sans-serif;
+  font-family: $font-family;
   max-height: 30px;
-  background: #3498DB;
+  background: $primary;
   border-radius: 8px;
   font-size: 16px;
-  color: rgba(255, 255, 255, 1);
+  color: $white;
   max-width: 140px;
   user-select: none;
   margin: auto 0 auto 2.35%;
 }
 
-.nav-bar__start-button:focus {
-  outline: none;
-}
-
-.nav-bar__start-button:hover {
-  outline: none;
-}
-
-.nav-bar__start-button:active {
-  transform: scale(0.96);
-}
+.nav-bar__start-button { @include focus-ring-none; }
 
 
